@@ -1,0 +1,171 @@
+:root {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  --bg-color: #F2CE97;
+  --card: #484956;
+  --line: #E37B62;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  box-shadow: 0px 5px 12px #00000026;
+  overflow: hidden;
+  width: 75%;
+  max-height: 70%;
+  background-color: white;
+  display: flex;
+}
+
+.card__header {
+  padding: 2.3rem;
+  background-color: var(--card);
+  color: white;
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__content {
+  background-color: white;
+  flex: 3;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  padding: 2.3rem;
+}
+
+.meta {
+  justify-self: flex-end;
+  width: 100%;
+  height: 5rem;
+  padding: 0 2rem;
+  box-shadow: 2px 2px 14px #00000024;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meta__right {
+  display: flex;
+  align-items: center;
+}
+
+.first-letter::first-letter {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.body-1 {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.text-grey {
+  color: #797878;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+.mr-1 {
+  margin-right: 0.7rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.7rem;
+}
+
+.mt-2 {
+  margin-top: 1.2rem;
+}
+
+.relative {
+  position: relative;
+}
+
+.line::after {
+  content: '';
+  width: 3rem;
+  height: 0.2rem;
+  background-color: var(--line);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 2.5rem;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px #00000045;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  :root {
+    font-size: 12px;
+  }
+
+  .card {
+    flex-direction: column;
+    width: 100%;
+    max-height: auto;
+    margin: 1rem;
+  }
+
+  .card__header .header {
+    margin-bottom: 3.5rem;
+  }
+}
